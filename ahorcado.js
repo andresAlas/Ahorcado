@@ -1,4 +1,5 @@
-var palabra = "Tamarindo";
+var opcionPalabra = ["madera","tamarindo","casa","ahorcado","Accesibilidad"];
+var palabra = opcionPalabra[Math.floor((Math.random() * 4) + 1)];
 var hombre, l, espacio;
 
 var Ahorcado = function(con)
@@ -15,12 +16,23 @@ Ahorcado.prototype.dibujar = function()
 	var dibujo = this.contexto;
 
 	dibujo.beginPath();
+	dibujo.lineWidth = 10;
+	dibujo.strokeStyle = "black";
+	dibujo.moveTo(0,0);
+	dibujo.lineTo(500,0);
+	dibujo.lineTo(500,400);
+	dibujo.lineTo(0,400);
+	dibujo.lineTo(0,0)
+	dibujo.stroke();
+	dibujo.closePath();
+
+	dibujo.beginPath();
 	dibujo.lineWidth = 5;
 	dibujo.strokeStyle = "black";
 	dibujo.moveTo(150,100);
 	dibujo.lineTo(150,50);
 	dibujo.lineTo(400,50);
-	dibujo.lineTo(400,350);
+	dibujo.lineTo(400,500);
 	dibujo.stroke();
 	dibujo.closePath();
 
@@ -125,6 +137,8 @@ function agregarLetra()
 {
 	var letra = l.value;
 	l.value = "";
+	//método que permite focalizarse en la caja de texto
+	l.focus();
 	letra = letra.toUpperCase();
 
 	mostrarPalabra(palabra,hombre,letra);
@@ -150,6 +164,12 @@ function mostrarPalabra(palabra,ahorcado,letra)
 	{
 		ahorcado.trazar();
 	}
+	if(!ahorcado.vivo)
+    {
+        p = document.getElementById("pista");
+        p.innerHTML = "palabra correcta es: " + palabra;//innerHTML permite 
+        //agregar la palabra correcta en "pista" cuando se acaban las vidas
+    }
 }
 
 function mostrarPista(espacio)
@@ -172,3 +192,4 @@ function mostrarPista(espacio)
 	}
 	pista.innerText = texto;
 }
+
