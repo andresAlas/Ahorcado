@@ -16,19 +16,13 @@ Ahorcado.prototype.dibujar = function()
 	var dibujo = this.contexto;
 
 	dibujo.beginPath();
-	dibujo.lineWidth = 10;
-	dibujo.strokeStyle = "black";
-	dibujo.moveTo(0,0);
-	dibujo.lineTo(500,0);
-	dibujo.lineTo(500,400);
-	dibujo.lineTo(0,400);
-	dibujo.lineTo(0,0)
-	dibujo.stroke();
+	dibujo.strokeStyle = "black"; 
+	dibujo.lineWidth = 5;
+	dibujo.strokeRect(0,0,500,400);
 	dibujo.closePath();
 
 	dibujo.beginPath();
 	dibujo.lineWidth = 5;
-	dibujo.strokeStyle = "black";
 	dibujo.moveTo(150,100);
 	dibujo.lineTo(150,50);
 	dibujo.lineTo(400,50);
@@ -53,7 +47,6 @@ Ahorcado.prototype.dibujar = function()
 		dibujo.beginPath();
 		dibujo.moveTo(150,180);
         dibujo.lineTo(150,250);
-        dibujo.strokeStyle = "blue";
         dibujo.lineWidth = 3;
         dibujo.stroke();
 		dibujo.closePath();
@@ -66,7 +59,6 @@ Ahorcado.prototype.dibujar = function()
         dibujo.moveTo(120,220);
         dibujo.lineTo(150,180);
         dibujo.lineTo(180,220);
-        dibujo.strokeStyle = "blue";
         dibujo.lineWidth = 3;
         dibujo.stroke();
         dibujo.closePath();
@@ -79,7 +71,6 @@ Ahorcado.prototype.dibujar = function()
         dibujo.moveTo(120,290);
         dibujo.lineTo(150,250);
         dibujo.lineTo(180,290);
-        dibujo.strokeStyle = "blue";
         dibujo.lineWidth = 3;
         dibujo.stroke();
         dibujo.closePath();
@@ -167,7 +158,7 @@ function mostrarPalabra(palabra,ahorcado,letra)
 	if(!ahorcado.vivo)
     {
         p = document.getElementById("pista");
-        p.innerHTML = "palabra correcta es: " + palabra;//innerHTML permite 
+        p.innerHTML = "La palabra correcta es: " + palabra;//innerHTML permite 
         //agregar la palabra correcta en "pista" cuando se acaban las vidas
     }
 }
