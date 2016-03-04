@@ -32,29 +32,29 @@ Ahorcado.prototype.dibujar = function()
 
 	if(this.intentos > 0)
 	{
-		// intentos = 1 --> rostro
-		dibujo.beginPath();
-		dibujo.arc(150, 140, 40, 0, Math.PI * 2, false);
-		dibujo.strokeStyle = "blue";
+	// intentos = 1 --> rostro
+	dibujo.beginPath();
+	dibujo.arc(150, 140, 40, 0, Math.PI * 2, false);
+	dibujo.strokeStyle = "blue";
         dibujo.lineWidth = 3;
         dibujo.stroke();
-		dibujo.closePath();
+	dibujo.closePath();
 	}
 
 	if(this.intentos > 1)
 	{
-		// intentos = 2 --> torso
-		dibujo.beginPath();
-		dibujo.moveTo(150,180);
+	// intentos = 2 --> torso
+	dibujo.beginPath();
+	dibujo.moveTo(150,180);
         dibujo.lineTo(150,250);
         dibujo.lineWidth = 3;
         dibujo.stroke();
-		dibujo.closePath();
+	dibujo.closePath();
 	}
 
 	if(this.intentos > 2)
 	{
-		// intentos = 3 --> brazos
+	// intentos = 3 --> brazos
         dibujo.beginPath();
         dibujo.moveTo(120,220);
         dibujo.lineTo(150,180);
@@ -66,7 +66,7 @@ Ahorcado.prototype.dibujar = function()
 
 	if(this.intentos > 3)
 	{
-		// intentos = 4 --> piernas
+	// intentos = 4 --> piernas
         dibujo.beginPath();
         dibujo.moveTo(120,290);
         dibujo.lineTo(150,250);
@@ -78,7 +78,7 @@ Ahorcado.prototype.dibujar = function()
 
 	if(this.intentos > 4)
 	{
-		// intentos = 5 --> ojos muertos
+	// intentos = 5 --> ojos muertos
         dibujo.beginPath();
         //Ojo izquierdo
         dibujo.moveTo(125,120);
