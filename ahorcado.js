@@ -47,7 +47,6 @@ Ahorcado.prototype.dibujar = function()
 	dibujo.beginPath();
 	dibujo.moveTo(150,180);
         dibujo.lineTo(150,250);
-        dibujo.lineWidth = 3;
         dibujo.stroke();
 	dibujo.closePath();
 	}
@@ -59,7 +58,6 @@ Ahorcado.prototype.dibujar = function()
         dibujo.moveTo(120,220);
         dibujo.lineTo(150,180);
         dibujo.lineTo(180,220);
-        dibujo.lineWidth = 3;
         dibujo.stroke();
         dibujo.closePath();
 	}
@@ -71,7 +69,6 @@ Ahorcado.prototype.dibujar = function()
         dibujo.moveTo(120,290);
         dibujo.lineTo(150,250);
         dibujo.lineTo(180,290);
-        dibujo.lineWidth = 3;
         dibujo.stroke();
         dibujo.closePath();
 	}
@@ -93,7 +90,6 @@ Ahorcado.prototype.dibujar = function()
         dibujo.lineTo(155,145);
 
         dibujo.strokeStyle = "red";
-        dibujo.lineWidth = 3;
         dibujo.stroke();
         dibujo.closePath();
 	}
@@ -112,7 +108,7 @@ Ahorcado.prototype.trazar = function()
 
 function inicio()
 {
-    l = document.getElementById("letra");
+      	l = document.getElementById("letra");
 	var b = document.getElementById("boton");
 	var canvas = document.getElementById("c");
 	var contexto = canvas.getContext("2d");
